@@ -113,10 +113,10 @@ background: #0a111e;
 border: 2px solid #1e3a5f;
 border-radius: 10px;
 color: #4a7090;
-padding: 12px 8px;
+padding: 10px 4px;
 cursor: pointer;
 font-family: -apple-system, ‘SF Pro Display’, ‘Helvetica Neue’, sans-serif;
-font-size: 0.85rem;
+font-size: 0.72rem;
 font-weight: 700;
 letter-spacing: 0.05em;
 text-transform: uppercase;
@@ -520,9 +520,10 @@ font-size: 1rem;
 
 <!-- Timing Option -->
 
-<div class="timing-selector">
+<div class="timing-selector" style="grid-template-columns: 1fr 1fr 1fr;">
   <button class="timing-btn active" id="opt-0" onclick="selectOption(0)">Back Line<br>to Hog Line</button>
-  <button class="timing-btn" id="opt-1" onclick="selectOption(1)">Hog Line<br>to Hog Line</button>
+  <button class="timing-btn" id="opt-1" onclick="selectOption(1)">T-Line<br>to Hog Line</button>
+  <button class="timing-btn" id="opt-2" onclick="selectOption(2)">Hog Line<br>to Hog Line</button>
 </div>
 
 <!-- Display -->
@@ -576,15 +577,22 @@ font-size: 1rem;
   </div>
   <div class="history-block" id="history-1">
     <div class="history-header">
-      <span class="history-title"><span class="hl">H→H</span> &nbsp;Hog Line to Hog Line</span>
+      <span class="history-title"><span class="hl">T→H</span> &nbsp;T-Line to Hog Line</span>
       <button class="btn-clear" onclick="clearHistory(1)">Clear</button>
     </div>
     <div class="history-list" id="list-1"><div class="history-empty">No times recorded</div></div>
   </div>
+  <div class="history-block" id="history-2">
+    <div class="history-header">
+      <span class="history-title"><span class="hl">H→H</span> &nbsp;Hog Line to Hog Line</span>
+      <button class="btn-clear" onclick="clearHistory(2)">Clear</button>
+    </div>
+    <div class="history-list" id="list-2"><div class="history-empty">No times recorded</div></div>
+  </div>
 </div>
 
 <script>
-  const OPTIONS = ['Back Line to Hog Line', 'Hog Line to Hog Line'];
+  const OPTIONS = ['Back Line to Hog Line', 'T-Line to Hog Line', 'Hog Line to Hog Line'];
   let currentOption = 0;
   let running = false;
   let startTime = 0;
@@ -595,7 +603,8 @@ font-size: 1rem;
   // Load history
   let history = [
     JSON.parse(localStorage.getItem('curling_history_0') || '[]'),
-    JSON.parse(localStorage.getItem('curling_history_1') || '[]')
+    JSON.parse(localStorage.getItem('curling_history_1') || '[]'),
+    JSON.parse(localStorage.getItem('curling_history_2') || '[]')
   ];
 
   function pad(n, d) { return String(Math.floor(n)).padStart(d, '0'); }
@@ -726,6 +735,7 @@ font-size: 1rem;
     currentOption = idx;
     document.getElementById('opt-0').classList.toggle('active', idx === 0);
     document.getElementById('opt-1').classList.toggle('active', idx === 1);
+    document.getElementById('opt-2').classList.toggle('active', idx === 2);
     document.getElementById('time-label').textContent = OPTIONS[idx];
     document.getElementById('analog-label').textContent = OPTIONS[idx];
   }
@@ -896,6 +906,7 @@ font-size: 1rem;
   resizeCanvas();
   renderHistory(0);
   renderHistory(1);
+  renderHistory(2);
   drawAnalog(0);
 </script>
 
