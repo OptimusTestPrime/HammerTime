@@ -166,7 +166,7 @@ header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:
 
   <button class="btn-start" id="btn-start" onclick="toggleTimer()">
     <div class="pulse-ring"></div>
-    <div class="btn-start-icon" id="start-icon">&#9654;</div>
+    <div class="btn-start-icon" id="start-icon">▶</div>
     <div id="start-label">START</div>
   </button>
 
@@ -245,14 +245,14 @@ header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:
       running = true;
       rafId = requestAnimationFrame(tick);
       document.getElementById('btn-start').classList.add('running');
-      document.getElementById('start-icon').textContent = '&#9209;';
+      document.getElementById('start-icon').textContent = '⏹';
       document.getElementById('start-label').textContent = 'STOP';
       document.getElementById('time-display').classList.add('running');
     } else {
       cancelAnimationFrame(rafId);
       running = false;
       document.getElementById('btn-start').classList.remove('running');
-      document.getElementById('start-icon').textContent = '&#9654;';
+      document.getElementById('start-icon').textContent = '▶';
       document.getElementById('start-label').textContent = 'START';
       document.getElementById('time-display').classList.remove('running');
       logTime(elapsed);
@@ -264,7 +264,7 @@ header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:
       cancelAnimationFrame(rafId);
       running = false;
       document.getElementById('btn-start').classList.remove('running');
-      document.getElementById('start-icon').textContent = '&#9654;';
+      document.getElementById('start-icon').textContent = '▶';
       document.getElementById('start-label').textContent = 'START';
       document.getElementById('time-display').classList.remove('running');
     }
