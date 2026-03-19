@@ -81,8 +81,8 @@ header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:
 .modal-bg.open{opacity:1;pointer-events:all;}
 .modal-box{background:#1a2e42;border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:26px 24px;width:100%;max-width:440px;margin:auto;}
 .modal-box h2{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#5bb8f5;margin-bottom:18px;}
-.modal-box h3{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8aabb8;margin:20px 0 8px;}
-.modal-box h3:first-of-type{margin-top:0;}.modal-box h3::before,.modal-box h3::after,.modal-box h2::before,.modal-box h2::after{content:none !important;display:none !important;}
+.modal-box h3{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8aabb8;margin:20px 0 8px;}.help-h3{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8aabb8;margin:20px 0 8px;}
+.modal-box h3:first-of-type{margin-top:0;}.help-h3:first-of-type{margin-top:0;}.modal-box h3::before,.modal-box h3::after,.modal-box h2::before,.modal-box h2::after{content:none !important;display:none !important;}
 .modal-box p{font-size:14px;color:#c5dde8;line-height:1.65;margin-bottom:10px;}
 .modal-box p:last-of-type{margin-bottom:0;}
 .modal-btns{display:-webkit-flex;display:flex;-webkit-justify-content:flex-end;justify-content:flex-end;margin-top:22px;}
@@ -549,13 +549,12 @@ header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:
   <div class="modal-box">
     <h2>HammerTime Help</h2>
 
-```
-<h3>What is HammerTime?</h3>
+<p class="help-h3">What is HammerTime?</p>
 <p>HammerTime is a free curling delivery timer built by a curler, for curlers. Time your rocks from Back Line to Hog, T-Line to Hog, or Hog to Hog &mdash; and log where each one ends up.</p>
 
 <div class="help-divider"></div>
 
-<h3>How to Use</h3>
+<p class="help-h3">How to Use</p>
 <p><strong style="color:#e8f4f8;">1. Select a timing category</strong> &mdash; choose Back Line to Hog Line, T-Line to Hog Line, or Hog Line to Hog Line at the top.</p>
 <p><strong style="color:#e8f4f8;">2. Start &amp; Stop</strong> &mdash; tap the large Start button when the rock is released, tap Stop when it crosses the hog line. The time is saved automatically.</p>
 <p><strong style="color:#e8f4f8;">3. Log the result</strong> &mdash; use the dropdown on each entry to record where the rock ended up.</p>
@@ -564,12 +563,12 @@ header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:
 
 <div class="help-divider"></div>
 
-<h3>Display Modes</h3>
+<p class="help-h3">Display Modes</p>
 <p>Toggle between <strong style="color:#e8f4f8;">Digital</strong> and <strong style="color:#e8f4f8;">Analog</strong> views using the icons in the top right.</p>
 
 <div class="help-divider"></div>
 
-<h3>Add to Home Screen</h3>
+<p class="help-h3">Add to Home Screen</p>
 <p>HammerTime works offline and can be saved to your smartphone home screen just like a native app &mdash; no app store required.</p>
 <p><strong style="color:#e8f4f8;">iPhone / iPad:</strong> Open in Safari, tap the Share button, then select <strong style="color:#e8f4f8;">"Add to Home Screen"</strong>.</p>
 <p><strong style="color:#e8f4f8;">Android:</strong> Open in Chrome, tap the three-dot menu, then select <strong style="color:#e8f4f8;">"Add to Home Screen"</strong>.</p>
@@ -577,7 +576,7 @@ header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:
 
 <div class="help-divider"></div>
 
-<h3>Also Try</h3>
+<p class="help-h3">Also Try</p>
 <div class="help-promo">
   <div class="help-promo-icon">&#x1F94C;</div>
   <div class="help-promo-text">
@@ -589,7 +588,7 @@ header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:
 
 <div class="help-divider"></div>
 
-<h3>Connect</h3>
+<p class="help-h3">Connect</p>
 <div class="help-promo">
   <div class="help-promo-icon">&#x1F4F8;</div>
   <div class="help-promo-text">
@@ -610,7 +609,6 @@ header{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:
 <div class="modal-btns">
   <button class="btn btn-outline" onclick="closeHelp()">Close</button>
 </div>
-```
 
   </div>
 </div>
