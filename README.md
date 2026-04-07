@@ -1,2 +1,2 @@
 # HammerTime
-Claude created Curling Stopwatch Application
+Curling Stopwatch Application
